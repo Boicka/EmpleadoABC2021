@@ -15,9 +15,33 @@ public class EmpleadoDaoJDB implements EmpleadoDaoI{
 
     @Override
     public void alta(Empleado e) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection c;
+        String sql;
+        Statement smt;
+        //--Abrir BD
+        ConexionJDB conexion = new ConexionJDB();
+        c = conexion.abrir();
+        //--Obtener los valores de los atributos del objeto
+        int id = e.getId();
+        String nombre = e.getNombre();
+        String apellidos = e.getApellidos();
+        String puesto = e.getPuesto();
+        double sueldoBase = e.getSueldoBase();
+        //--Definir la sentencia
+        sql = "INSERT INTO EMPLEADO VALUES("
+                + id + ","
+                + "'" + nombre + "',"
+                + "'" + apellidos + "',"
+                + "'" + puesto + "',"
+                + sueldoBase + ")";
+//        System.out.println(sql);
+        //--Ejecutar la sentencia
+        smt = c.createStatement();
+        smt.executeUpdate(sql);
+        //--Cerrar la BD
+        c.close();
     }
-
+        
     @Override
     public void baja(int id) throws SQLException {
         Statement smt;
@@ -34,8 +58,22 @@ public class EmpleadoDaoJDB implements EmpleadoDaoI{
     }
 
     @Override
-    public void cambio(Empleado e) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void cambio(int id, String nombre, String apellido, String puesto,
+            double sueldobase) throws SQLException {
+        Statement smt;
+        
+        Connection c;
+        ConexionJDB conexion = new ConexionJDB();
+        //--Abrir BD
+        c = conexion.abrir();
+        //--Ejecutar la busqueda
+        String sentencia = "UPDATE EMPLEADO SET NOMBRE='" + nombre  + "', APELLIDOS='" 
+                + apellido + "', PUESTO='" + puesto + "', SUELDOBASE=" + sueldobase + " WHERE ID=" + id;
+        smt = c.createStatement();
+        smt.executeUpdate(sentencia);
+        //--Crear el objeto
+        System.out.println("Actualizado");
+        c.close();
     }
 
     @Override
