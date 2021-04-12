@@ -18,6 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import sun.rmi.runtime.Log;
 
 /**
  *
@@ -38,33 +39,39 @@ public class Consulta extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        int id;
-        Empleado e = null;
-        String mensaje = "";
-        String paginaRespuesta;
-        //Recibir id del formulario y convertir al tipo necesario
-        id = Integer.parseInt(request.getParameter("id"));
-        //Hacer la consulta
-        EmpleadoDaoJDB eDB = new EmpleadoDaoJDB();
-        try {
-            eDB.consulta(id);
-            if(e == null){
-                mensaje = "Empleado inexistente";
-            // no se encontro el empleado
-            }
-        } catch (SQLException ex) {
-           mensaje = ex.getMessage();
-           request.setAttribute("mensaje", mensaje);
-        }
-        //Definir la pagina de respuesta
-        paginaRespuesta="consulta.jsp";
-        //Enviar datos a la pagina de respuesta
-        request.setAttribute("empleado", e);
-        //Redireccionar a la pagina de respuesta
-        //<%-- ESTO HAY QUE APRENDERLO --%>
-        RequestDispatcher dispatcher
-                = request.getRequestDispatcher(paginaRespuesta);
-        dispatcher.forward(request, response);
+//        int id;
+//        Empleado e = null;
+//        String mensaje = "";
+//        String paginaRespuesta;
+//        //Recibir id del formulario y convertir al tipo necesario
+//        id = Integer.parseInt(request.getParameter("id"));
+//        //Hacer la consulta
+//        EmpleadoDaoJDB eDB = new EmpleadoDaoJDB();
+//        try {
+//            eDB.consulta(id);
+//            if(e == null){
+//                mensaje = "Empleado inexistente";
+//            // no se encontro el empleado
+//            }else{
+//            e.getId();
+//            e.getNombre();
+//            e.getApellidos();
+//            e.getPuesto();
+//            e.getSueldoBase();
+//            }
+//        } catch (SQLException ex) {
+//           mensaje = ex.getMessage();
+//           request.setAttribute("mensaje", mensaje);
+//        }
+//        //Definir la pagina de respuesta
+//        paginaRespuesta="consulta.jsp";
+//        //Enviar datos a la pagina de respuesta
+//        request.setAttribute("empleado", e);
+//        //Redireccionar a la pagina de respuesta
+//        //<%-- ESTO HAY QUE APRENDERLO --%>
+//        RequestDispatcher dispatcher
+//                = request.getRequestDispatcher(paginaRespuesta);
+//        dispatcher.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -94,6 +101,46 @@ public class Consulta extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        //Meter el id de lo que trae el text
+        int id;
+        //Objeto que traigo de la bd
+        Empleado e = null;
+        //Mensaje que manda si no existe el empleado
+        String mensaje = "";
+        //Pagina de respuesta
+        String paginaRespuesta;
+        //Recibir id del formulario y convertir al tipo necesario
+        id = Integer.parseInt(request.getParameter("id"));
+        System.out.println(id);
+        Log.getLog(mensaje, mensaje, id);
+        //Hacer la consulta
+        EmpleadoDaoJDB eDB = new EmpleadoDaoJDB();
+        try {
+            e = eDB.consulta(id);
+            if(e == null){
+                mensaje = "Empleado inexistente";
+            // no se encontro el empleado
+            }else{
+                
+            e.getId();
+            e.getNombre();
+            e.getApellidos();
+            e.getPuesto();
+            e.getSueldoBase();
+            }
+        } catch (SQLException ex) {
+           mensaje = ex.getMessage();
+           request.setAttribute("mensaje", mensaje);
+        }
+        //Definir la pagina de respuesta
+        paginaRespuesta="consulta.jsp";
+        //Enviar datos a la pagina de respuesta
+        request.setAttribute("e", e);
+        //Redireccionar a la pagina de respuesta
+        //<%-- ESTO HAY QUE APRENDERLO --%>
+        RequestDispatcher dispatcher
+                = request.getRequestDispatcher(paginaRespuesta);
+        dispatcher.forward(request, response);
     }
 
     /**

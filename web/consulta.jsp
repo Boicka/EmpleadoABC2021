@@ -14,16 +14,16 @@
     <body>
         <h1>Consultar Empleados</h1>
         <h2>Buscar por id</h2>
-        <form action="consulta" method="POST">
+        <form action="Consulta" method="POST">
             <br>Id: <input type="text" name="id"/>
             <br><input type="submit" value="consulta" />
         </form>
         <%-- Pendiente --%>
-        <br>Id: ${empleado.id}
-        <br>Nombre: ${empleado.nombre}
-        <br>Apellidos: ${empleado.apellidos}
-        <br>Puesto: ${empleado.puesto}
-        <br>Sueldo base: ${empleado.sueldobase}
+        <br>Id: ${e.id}
+        <br>Nombre: ${e.nombre}
+        <br>Apellidos: ${e.apellidos}
+        <br>Puesto: ${e.puesto}
+        <br>Sueldo base: ${e.sueldoBase}
         <footer>
             <%-- Mensaje --%>
             ${mensaje}
