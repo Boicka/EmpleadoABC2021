@@ -1,3 +1,18 @@
+#titulo{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background-color: black;
+}
+
+#logochido{
+    grid-column-start: 2;
+}
+
+#name{
+    grid-column-start: 1;
+    background-color: black;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -34,3 +49,4 @@ li a:hover:not(.active) {
 html{
     background-color: #CCD1D1;
 }
+

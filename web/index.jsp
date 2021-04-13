@@ -21,10 +21,10 @@
         <h1 class="p1">Mi Empleado ABC</h1>
     </center>
     <ul>
-        <li><a href="#alta" class="p1">Alta</a></li>
-        <li><a href="#borrar" class="p1">Borrar</a></li>
-        <li><a href="#actualizar" class="p1">Actualizar</a></li>
-        <li><a href="./consulta.jsp" title="Consultar" class="p1">Consulta</a></li>
+        <li><a href="./alta.jsp" class="p1">Alta de empleado</a></li>
+        <li><a href="./eliminar.jsp" class="p1">Eliminar empleado</a></li>
+        <li><a href="./actualizar.jsp" class="p1">Actualizar empleado</a></li>
+        <li><a href="./consulta.jsp" title="Consultar" class="p1">Consultar empleado</a></li>
         <li style="float:right"><a class="active" href="#about">About</a></li>
     </ul>
 

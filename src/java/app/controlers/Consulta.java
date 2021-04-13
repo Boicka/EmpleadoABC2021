@@ -8,17 +8,14 @@ package app.controlers;
 import app.model.Empleado;
 import app.persistencia.EmpleadoDaoJDB;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import sun.rmi.runtime.Log;
+
 
 /**
  *
@@ -112,7 +109,6 @@ public class Consulta extends HttpServlet {
         //Recibir id del formulario y convertir al tipo necesario
         id = Integer.parseInt(request.getParameter("id"));
         System.out.println(id);
-        Log.getLog(mensaje, mensaje, id);
         //Hacer la consulta
         EmpleadoDaoJDB eDB = new EmpleadoDaoJDB();
         try {

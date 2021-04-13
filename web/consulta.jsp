@@ -16,7 +16,7 @@
         <h2>Buscar por id</h2>
         <form action="Consulta" method="POST">
             <br>Id: <input type="text" name="id"/>
-            <br><input type="submit" value="consulta" />
+            <br><input type="submit" value="Consulta" />
         </form>
         <%-- Pendiente --%>
         <br>Id: ${e.id}
