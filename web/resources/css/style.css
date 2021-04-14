@@ -13,6 +13,11 @@
     background-color: black;
 }
 
+.encabezado{
+    display: flex;
+    justify-content: flex-end;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
