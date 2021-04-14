@@ -22,7 +22,7 @@
         <h1 class="p1">Mi Empleado ABC</h1>
     </div>
     <ul>
-        <li><a href="./index.jsp" class="active">Inicio</a></li>
+        <li><a href="./index.jsp" class="active"><i class="fas fa-home-lg-alt"></i>Inicio</a></li>
         <li><a href="./alta.jsp" class="p1">Alta de empleado</a></li>
         <li><a href="./eliminar.jsp" class="p1">Eliminar empleado</a></li>
         <li><a href="./actualizar.jsp" class="p1">Actualizar empleado</a></li>

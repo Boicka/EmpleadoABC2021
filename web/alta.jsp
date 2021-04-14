@@ -30,5 +30,19 @@
             <li><a href="./consulta.jsp" title="Consultar" class="p1">Consultar empleado</a></li>
             <li style="float:right"><a class="p1" href="#about">About</a></li>
         </ul>
+        
+        <h2 class="p1">Nuevo empleado</h2>
+        
+        <form action="AltaEmpleado" method="POST">
+            <br>Id: <input type="text" name="idT"/>
+            <br>Nombre: <input type="text" name="nombreT"/>
+            <br>Apellidos: <input type="text" name="apellidosT"/>
+            <br>Puesto: <input type="text" name="puestoT"/>
+            <br>Sueldo: <input type="text" name="sueldoT"/>
+            <br><input type="submit" value="Alta"/>
+        </form>
+        <footer>
+            ${mensaje}
+        </footer>
     </body>
 </html>
