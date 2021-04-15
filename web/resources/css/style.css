@@ -1,21 +1,10 @@
-#titulo{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    background-color: black;
-}
-
-#logochido{
-    grid-column-start: 2;
-}
-
-#name{
-    grid-column-start: 1;
-    background-color: black;
-}
-
 #encabezado{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
