@@ -1,7 +1,7 @@
 <%-- 
     Document   : consulta
     Created on : 12/04/2021, 07:21:38 AM
-    Author     : Héctor Medel Negrete
+    Author     : Héctor Medel Negrete.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

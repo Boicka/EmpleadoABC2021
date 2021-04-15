@@ -15,20 +15,22 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
-    
-    <body>
-    <div class="encabezado">
-        <img src="resources/images/logo.png" id="logo" width="125" height="125"/>
-        <h1 class="p1">Mi Empleado ABC</h1>
-    </div>
-    <ul>
-        <li><a href="./index.jsp" class="active"><i class="fas fa-home-lg-alt"></i>Inicio</a></li>
-        <li><a href="./alta.jsp" class="p1">Alta de empleado</a></li>
-        <li><a href="./eliminar.jsp" class="p1">Eliminar empleado</a></li>
-        <li><a href="./actualizar.jsp" class="p1">Actualizar empleado</a></li>
-        <li><a href="./consulta.jsp" title="Consultar" class="p1">Consultar empleado</a></li>
-        <li style="float:right"><a class="p1" href="#about">About</a></li>
-    </ul>
 
-</body>
+    <body>
+
+        <div id="encabezado">
+            <div></div>
+            <div><h1>Mi Empleado ABC</h1></div>
+            <div><img src="resources/images/logo.png" id="logo" width="125" height="125"></div>
+        </div>
+        <ul>
+            <li><a href="./index.jsp" class="active"><i class="fas fa-home-lg-alt"></i>Inicio</a></li>
+            <li><a href="./alta.jsp" class="p1">Alta de empleado</a></li>
+            <li><a href="./eliminar.jsp" class="p1">Eliminar empleado</a></li>
+            <li><a href="./actualizar.jsp" class="p1">Actualizar empleado</a></li>
+            <li><a href="./consulta.jsp" title="Consultar" class="p1">Consultar empleado</a></li>
+            <li style="float:right"><a class="p1" href="#about">About</a></li>
+        </ul>
+
+    </body>
 </html>
