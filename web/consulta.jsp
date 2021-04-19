@@ -32,7 +32,7 @@
         </ul>
         <h2 class="p1">Buscar por id</h2>
         <form action="Consulta" method="POST">
-            <br>Id: <input type="text" name="id"/>
+            <br>Id: <input type="text" name="id" placeholder="Ingresa el id"/>
             <br><input type="submit" value="Consulta" />
         </form>
         <%-- Pendiente --%>
