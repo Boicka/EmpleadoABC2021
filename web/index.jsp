@@ -30,8 +30,10 @@
             <li><a href="./eliminar.jsp" class="p1"><i class="fa fa-trash"></i> Eliminar empleado</a></li>
             <li><a href="./actualizar.jsp" class="p1"><i class="fa fa-users"></i> Actualizar empleado</a></li>
             <li><a href="./consulta.jsp" class="p1"><i class="fa fa-search"></i> Consultar empleado</a></li>
-            <li style="float:right"><a class="p1" href="#about">About</a></li>
         </ul>
-
+        
+        <div class="welcome">
+            <h1>Bienvenido</h1>
+        </div>
     </body>
 </html>

@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="alerta('${mensaje}');">
         <div id="encabezado">
             <div></div>
             <div><h1>Mi Empleado ABC</h1></div>
@@ -28,22 +28,43 @@
             <li><a href="./eliminar.jsp" class="p1"><i class="fa fa-trash"></i> Eliminar empleado</a></li>
             <li><a href="./actualizar.jsp" class="p1"><i class="fa fa-users"></i> Actualizar empleado</a></li>
             <li><a href="./consulta.jsp" class="active"><i class="fa fa-search"></i> Consultar empleado</a></li>
-            <li style="float:right"><a class="p1" href="#about">About</a></li>
         </ul>
-        <h2 class="p1">Buscar por id</h2>
-        <form action="Consulta" method="POST">
-            <br>Id: <input type="text" name="id" placeholder="Ingresa el id"/>
-            <br><input type="submit" value="Consulta" />
-        </form>
-        <%-- Pendiente --%>
-        <br>Id: ${e.id}
-        <br>Nombre: ${e.nombre}
-        <br>Apellidos: ${e.apellidos}
-        <br>Puesto: ${e.puesto}
-        <br>Sueldo base: ${e.sueldoBase}
-        <footer>
-            <%-- Mensaje --%>
-            ${mensaje}
-        </footer>
+        <div class="welcome">
+            <h1>Consultar Empleado</h1>
+            <div class="formulario">
+                <form action="Consulta" class="form" method="POST">
+                    <label for="id">
+                        <b>ID</b>
+                        <input type="text" placeholder="ID" name="id" id="" value="${e.id}" required="">
+                    </label>
+                    <label for="fName">
+                        <b>Nombre</b>
+                        <input type="text" placeholder="Nombre" name="fName" id="" value="${e.nombre}" disabled>
+                    </label>
+                    <b>Apellido</b>
+                    <label for="lName">
+                        <b>Apellido</b>
+                        <input type="text" placeholder="Apellido" name="lName" id="" value="${e.apellidos}" disabled>
+                    </label>
+                    <label for="puesto">
+                        <b>Puesto</b>
+                        <input type="text" placeholder="Puesto" name="puesto" id="" value="${e.puesto}" disabled>
+                    </label>
+                    <label for="sueldo">
+                        <b>Sueldo</b>
+                        <input type="text" placeholder="Sueldo" name="sueldo" id="" value="${e.sueldoBase}" disabled>
+                    </label>
+                    <center><button type="submit" class="btn">Buscar</button></center>
+                </form>
+
+            </div>
+        </div>
     </body>
+    <script type="text/javascript">
+        function alerta(mensaje) {
+            if (mensaje != "") {
+                alert(mensaje);
+            }
+        }
+    </script>
 </html>

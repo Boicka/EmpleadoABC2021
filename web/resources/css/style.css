@@ -1,3 +1,40 @@
+.welcome{
+    padding: 30px;
+    text-align: center;
+}
+.form{
+    padding: 60px;
+    height: 50%;
+    border-radius: 15px;
+    border: 5px solid;
+    border-color: #154360;
+}
+.formulario{
+    padding: 2% 25% 5% 25%;
+    text-align: left;
+}
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 2px solid #154360; /* Gray border */
+    border-radius: 6px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.btn{
+    color: black;
+    padding: 15px 40px;
+    border: 2px solid #154360;
+    cursor: pointer;
+    width: 30%;
+    /*opacity: 0.9;*/
+    border-radius: 15px;
+}
+.danger{
+    background-color: #B71D00;
+}
 #encabezado{
     display:flex;
     justify-content: space-between;

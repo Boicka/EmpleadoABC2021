@@ -16,7 +16,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    
+    <body onload="alerta('${mensaje}');">
         <div id="encabezado">
             <div></div>
             <div><h1>Mi Empleado ABC</h1></div>
@@ -28,7 +29,42 @@
             <li><a href="./eliminar.jsp" class="p1"><i class="fa fa-trash"></i> Eliminar empleado</a></li>
             <li><a href="./actualizar.jsp" class="active"><i class="fa fa-users"></i> Actualizar empleado</a></li>
             <li><a href="./consulta.jsp" class="p1"><i class="fa fa-search"></i> Consultar empleado</a></li>
-            <li style="float:right"><a class="p1" href="#about">About</a></li>
         </ul>
+
+        <div class="welcome">
+            <h1>Actualizar Empleado</h1>
+            <div class="formulario">
+                <form action="ActualizarEmpleado" class="form" method="POST">
+                    <label for="id">
+                        <b>ID</b>
+                        <input type="text" placeholder="ID" name="id">
+                    </label>
+                    <label for="fName">
+                        <b>Nombre</b>
+                        <input type="text" placeholder="Nombre" name="fName">
+                    </label>
+                    <label for="lName">
+                        <b>Apellido</b>
+                        <input type="text" placeholder="Apellido" name="lName">
+                    </label>
+                    <label for="puesto">
+                        <b>Puesto</b>
+                        <input type="text" placeholder="Puesto" name="puesto">
+                    </label>
+                    <label for="sueldo">
+                        <b>Sueldo</b>
+                        <input type="text" placeholder="Sueldo" name="sueldo">
+                    </label>
+                    <center><button type="submit" class="btn">Actualizar</button></center>
+                </form>
+            </div>
+        </div>
     </body>
+    <script type="text/javascript">
+        function alerta(mensaje) {
+            if (mensaje != "") {
+                alert(mensaje);
+            }
+        }
+    </script>
 </html>

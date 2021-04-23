@@ -4,9 +4,25 @@
         <servlet-name>AltaEmpleado</servlet-name>
         <servlet-class>app.controlers.AltaEmpleado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminarEmpleado</servlet-name>
+        <servlet-class>app.controlers.EliminarEmpleado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActualizarEmpleado</servlet-name>
+        <servlet-class>app.controlers.ActualizarEmpleado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AltaEmpleado</servlet-name>
         <url-pattern>/AltaEmpleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarEmpleado</servlet-name>
+        <url-pattern>/EliminarEmpleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarEmpleado</servlet-name>
+        <url-pattern>/ActualizarEmpleado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
