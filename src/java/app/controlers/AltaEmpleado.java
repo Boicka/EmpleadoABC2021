@@ -84,7 +84,7 @@ public class AltaEmpleado extends HttpServlet {
         //Convertir datos si es necesarios
         id = Integer.parseInt(request.getParameter("idT"));
         nombre = request.getParameter("nombreT");
-        apellidos = request.getParameter("apellidosT");
+        apellidos = request.getParameter("apellidoT");
         puesto = request.getParameter("puestoT");
         sueldo = Double.parseDouble(request.getParameter("sueldoT"));
         //Crear el objeto de la Clase Empleado
